@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+
+@font-face {
+  font-family: 'luckiest';
+  src: url('./fonts/luckiest-guy-regular.TTF');
+}
+
+:root {
+  --rojo: #EF476F;
+  --amarillo: #FFD166;
+  --verde: #06D6A0;
+  --azul: #118AB2;
+  --oscuro: #073B4C;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #f7d994;
+}
+
+#leaderboard {
+  align-self: flex-end;
+  position: absolute;
+  z-index: -1;
+  padding-right: 2.3rem;
+  top: 30px;
+}
+
+img#logo {
+  width: 400px;
+  animation: pulse;
+  animation-duration: 1s;
+  animation-iteration-count: 2;
+  display: flex;
+  z-index: 1;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 5px solid var(--oscuro);
+  border-radius: 15px;
+  width: 80%;
+  position: relative;
+  bottom: 50px;
+  height: 22rem;
+}
+
+h1 {
+  padding: 2rem 0 0.5rem 0;
+  text-align: center;
+  font-family: 'luckiest';
+  font-size: 2.5rem;
+  font-weight: 200;
+  color: var(--oscuro);
+}
+
+li {
+  font-family: 'Roboto';
+  font-weight: 400;
+  list-style: none;
+  color: var(--oscuro);
+  text-align: center;
+  padding: 0.8rem 0 0.5rem 0;
+}
+
+button {
+  width: 200px;
+  border-radius: 15px;
+  border: none;
+  font-family: 'luckiest';
+  color: var(--verde);
+  background-color: var(--oscuro);
+  font-size: 3rem;
+  padding: 1rem 2rem;
+  position: relative;
+  top: 1.2vh;
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  #leaderboard {
+    padding-right: 5rem;
+    top: 310px;
+  }
+
+  section {
+    bottom: 55px;
+    height: 20rem;
+    padding: 0 1rem;
+  }
+
+  a {
+    height: 0px;
+  }
+
+  button {
+    top: 3.8vh;
+  }
+}
+
+@media (min-width: 1025px) {
+  #leaderboard {
+    padding-right: 36rem;
+    top: 300px;
+  }
+
+  section {
+    bottom: 55px;
+    height: 20rem;
+    padding: 0 1rem;
+    width: 40%;
+  }
+
+  a {
+    height: 0px;
+  }
+
+  button {
+    top: 6vh;
+  }
+}
