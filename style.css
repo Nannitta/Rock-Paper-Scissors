@@ -25,15 +25,13 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #f7d994;
+  position: relative;
 }
 
-#leaderboard {
-  align-self: flex-end;
+#leaderboard img {
   position: absolute;
-  z-index: -1;
-  padding-right: 2.3rem;
-  top: 30px;
+  bottom: 31rem;
+  left: 16rem;
 }
 
 img#logo {
@@ -51,7 +49,7 @@ section {
   align-items: center;
   border: 5px solid var(--oscuro);
   border-radius: 15px;
-  width: 80%;
+  max-width: 300px;
   position: relative;
   bottom: 50px;
   height: 22rem;
@@ -84,8 +82,9 @@ button {
   background-color: var(--oscuro);
   font-size: 3rem;
   padding: 1rem 2rem;
-  position: relative;
-  top: 1.2vh;
+  position: absolute;
+  top: 18.5rem;
+  left: 3rem;
 }
 
 @media (max-width: 1024px) and (min-width: 768px) {
@@ -94,10 +93,16 @@ button {
     top: 310px;
   }
 
+  #leaderboard img {
+    bottom: 21rem;
+    left: 36rem;
+  }
+
   section {
     bottom: 55px;
     height: 20rem;
     padding: 0 1rem;
+    max-width: 625px;
   }
 
   a {
@@ -105,7 +110,8 @@ button {
   }
 
   button {
-    top: 3.8vh;
+    top: 16.5rem;
+    left: 13rem;
   }
 }
 
@@ -115,18 +121,28 @@ button {
     top: 300px;
   }
 
+  #leaderboard img {
+    bottom: 21rem;
+    left: 45rem;
+  }
+
   section {
     bottom: 55px;
     height: 20rem;
     padding: 0 1rem;
-    width: 40%;
-  }
-
-  a {
-    height: 0px;
+    min-width: 775px;
   }
 
   button {
-    top: 6vh;
+    top: 16.5rem;
+    left: 18rem;
+  }
+
+  button:hover {
+    cursor: pointer;
+    color: var(--oscuro);
+    background-color: var(--verde);
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.2);
   }
 }
