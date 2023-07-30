@@ -6,10 +6,7 @@
 }
 
 :root {
-  --rojo: #EF476F;
-  --amarillo: #FFD166;
   --verde: #06D6A0;
-  --azul: #118AB2;
   --oscuro: #073B4C;
 }
 
@@ -35,7 +32,7 @@ body {
 }
 
 img#logo {
-  width: 400px;
+  width: 380px;
   animation: pulse;
   animation-duration: 1s;
   animation-iteration-count: 2;
