@@ -54,7 +54,7 @@ header {
 
 .container-moves img {
   width: 125px;
-  animation: bounceIn;
+  animation: fadeIn;
   animation-duration: 2s;
 }
 
