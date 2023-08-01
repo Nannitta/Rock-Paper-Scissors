@@ -17,7 +17,7 @@
 		</header>
 		<main>
 			<section class="choose-move">
-				<h1>RONDA X</h1>
+				<h2>RONDA X</h2>
 				<div class="container-moves">
 					<img src="../../assets/rock.png" alt="Rock" class="rock" />
 					<img src="../../assets/papper.png" alt="Papper" class="papper" />
@@ -29,19 +29,33 @@
 				</div>
 			</section>
 
-			<!-- 			<section>
+			<section class="round">
+				<h2></h2>
 				<p>Player</p>
-				<img src="" alt="" />
+				<img src="" alt="" class="user-move-img" />
 				<p>VS.</p>
 				<p>IA</p>
-				<img src="" alt="" />
-				<p>You win/lose!</p>
+				<img src="" alt="" class="ia-move-img" />
+				<p class="round-result"></p>
 				<div class="scores">
-					<div>Player Score</div>
-					<div>IA Score</div>
+					<div>
+						<p>Player</p>
+						<p class="player-score">0</p>
+					</div>
+					<div>
+						<p>IA</p>
+						<p class="ia-score">0</p>
+					</div>
 				</div>
-				<button>Next round!</button>
-			</section> -->
+				<button class="next-round">Next round!</button>
+			</section>
+
+			<section class="final">
+				<p class="final-round"></p>
+				<button class="play-again">Play Again!</button>
+			</section>
 		</main>
+
+		<script src="./index.js" type="module"></script>
 	</body>
 </html>
