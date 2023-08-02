@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+
 @font-face {
   font-family: 'luckiest';
   src: url('../../fonts/luckiest-guy-regular.TTF');
@@ -5,6 +7,7 @@
 
 :root {
   --oscuro: #073B4C;
+  --verde: #06D6A0;
 }
 
 * {
@@ -13,10 +16,11 @@
   box-sizing: border-box;
 }
 
+/* GENERAL */
 body {
   height: 100vh;
   display: grid;
-  grid-template-rows: 8rem 1fr;
+  grid-template-rows: 12rem 1fr;
 }
 
 header {
@@ -28,28 +32,46 @@ header {
   width: 300px;
 }
 
+/* HOME PAGE */
 .choose-move {
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2.5rem;
-  padding-top: 3.5rem;
   font-family: 'luckiest';
 }
 
-.choose-move h1 {
+.choose-move h2 {
   font-size: 2.5rem;
   color: var(--oscuro);
   font-weight: 400;
+  grid-row: 1 / 2;
+  grid-column: 1 / 3;
+}
+
+.rock {
+  grid-row: 2 / 3;
+  grid-column: 1 / 3;
+}
+
+.papper {
+  grid-row: 3 / 4;
+  grid-column: 1 / 2;
+}
+
+.scissors {
+  grid-row: 3 / 4;
+  grid-column: 2 / 3;
 }
 
 .container-moves {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows:  5rem 1fr 1fr;
   justify-items: center;
+  gap: 1rem;
 }
 
 .container-moves img {
@@ -58,19 +80,64 @@ header {
   animation-duration: 2s;
 }
 
-.rock {
-  grid-row: 1 / 2;
-  grid-column: 1 / 3;
+/* ROUND MATCH */
+.container-current-match {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  color: var(--oscuro);
+  font-family: 'luckiest';
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
 }
 
-.papper {
-  grid-row: 2 / 3;
-  grid-column: 1 / 2;
+.player-current-match, .ia-current-match {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
 }
 
-.scissors {
-  grid-row: 2 / 3;
-  grid-column: 2 / 3;
+.vs {
+  font-size: 3rem;
+  padding-top: 3rem;
+}
+
+.round-result {
+  color: var(--oscuro);
+  font-family: 'luckiest';
+  font-size: 2rem;
+  text-align: center;
+}
+
+.scores {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-around;
+  color: var(--oscuro);
+  font-family: 'Roboto';
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.player-current-score, .ia-current-score {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 6rem;
+  padding: 1rem;
+}
+
+.next-round {
+  width: 175px;
+  height: 75px;
+  border-radius: 15px;
+  border: none;
+  font-family: 'luckiest';
+  color: var(--verde);
+  background-color: var(--oscuro);
+  font-size: 1.5rem;
 }
 
 @media (max-width: 1024px) and (min-width: 768px) {
@@ -78,8 +145,8 @@ header {
     width: 500px;
   }
 
-  .choose-move {
-    padding-top: 12rem;
+  .container-moves {
+    margin-top: 7rem;
   }
 
   .container-moves img {
@@ -92,12 +159,9 @@ header {
     width: 500px;
   }
 
-  .choose-move {
-    padding-top: 11rem;
-  }
-
   .container-moves {
-    width: 40%;
+    margin-top: 7rem;
+    max-width: 50%;
   }
 
   .container-moves img {
