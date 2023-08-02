@@ -12,55 +12,58 @@
 	</head>
 
 	<body>
-		<header>
-			<img src="../../assets/logo.png" alt="Logo" id="logo" />
-		</header>
-		<main>
-			<section class="choose-move">
-				<div class="container-moves">
-					<h2>RONDA X</h2>
-					<img src="../../assets/rock.png" alt="Rock" class="rock" />
-					<img src="../../assets/papper.png" alt="Papper" class="papper" />
-					<img
-						src="../../assets/scissors.png"
-						alt="Scissors"
-						class="scissors"
-					/>
-				</div>
-			</section>
-
-			<section class="round">
-				<div class="container-current-match">
-					<div class="player-current-match">
-						<p>Player</p>
-						<img src="" alt="" class="user-move-img" />
-					</div>
-					<p class="vs">VS</p>
-					<div class="ia-current-match">
-						<p>IA</p>
-						<img src="" alt="" class="ia-move-img" />
-					</div>
-				</div>
-				<p class="round-result"></p>
-				<div class="scores">
-					<div class="player-current-score">
-						<p>Player</p>
-						<p class="player-score">0</p>
-					</div>
-					<div class="ia-current-score">
-						<p>IA</p>
-						<p class="ia-score">0</p>
-					</div>
-				</div>
-				<button class="next-round">Next round!</button>
-			</section>
-
-			<section class="final">
-				<p class="final-round"></p>
-				<button class="play-again">Play Again!</button>
-			</section>
-		</main>
+		<div class="background">
+			<div class="white-bg">
+				<header>
+					<img src="../../assets/logo.png" alt="Logo" id="logo" />
+				</header>
+				<main>
+					<section class="choose-move">
+						<div class="container-moves">
+							<h2>RONDA X</h2>
+							<img src="../../assets/rock.png" alt="Rock" class="rock" />
+							<img src="../../assets/papper.png" alt="Papper" class="papper" />
+							<img
+								src="../../assets/scissors.png"
+								alt="Scissors"
+								class="scissors"
+							/>
+						</div>
+					</section>
+					<section class="round">
+						<div class="container-current-match">
+							<div class="player-current-match">
+								<p>Player</p>
+								<img src="" alt="" class="user-move-img" />
+							</div>
+							<p class="vs">VS</p>
+							<div class="ia-current-match">
+								<p>IA</p>
+								<img src="" alt="" class="ia-move-img" />
+							</div>
+						</div>
+						<p class="round-result"></p>
+						<div class="scores">
+							<div class="player-current-score">
+								<p>Player</p>
+								<p class="player-score">0</p>
+							</div>
+							<div class="ia-current-score">
+								<p>IA</p>
+								<p class="ia-score">0</p>
+							</div>
+						</div>
+						<button class="next-round">Next round!</button>
+					</section>
+					<section class="final">
+						<p class="final-round"></p>
+						<button class="play-again">Play Again!</button>
+					</section>
+				</main>
+			</div>
+		</div>
 
 		<script src="./index.js" type="module"></script>
+		<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 	</body>
 </html>
