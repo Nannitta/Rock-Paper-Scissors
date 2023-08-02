@@ -38,7 +38,9 @@ function handleRound (event) {
   const iaMove = iaMoveGenerator();
   const userMove = handleClickMove(event);
 
-  round.style.display = 'initial';
+  round.style.display = 'flex';
+  round.style.flexDirection = 'column';
+  round.style.alignItems = 'center';
   homePage.style.display = 'none';
   userMoveImg.style.width = '125px';
   userMoveImg.setAttribute('src', `../../assets/${userMove}.png`);
@@ -56,12 +58,12 @@ function handleClickMove (event) {
 
 function handleNextRound () {
   final.style.display = 'none';
-  homePage.style.display = 'initial';
+  homePage.style.display = 'flex';
   round.style.display = 'none';
 };
 
 function handlePlayAgain () {
-  homePage.style.display = 'initial';
+  homePage.style.display = 'flex';
   round.style.display = 'none';
   final.style.display = 'none';
   localStorageMatch();
@@ -118,9 +120,12 @@ function game () {
       finalResult.textContent = 'HAS PERDIDO!';
     } else {
       finalResult.textContent = 'HAS GANADO!';
+      fireWins();
     };
 
-    final.style.display = 'initial';
+    final.style.display = 'flex';
+    final.style.flexDirection = 'column';
+    final.style.alignItems = 'center';
     round.style.display = 'none';
     homePage.style.display = 'none';
   }
@@ -142,4 +147,46 @@ function localStorageMatch () {
     date: new Date()
   }
   localStorage.setItem('partida', JSON.stringify(match));
+};
+
+/*  CONFETTI WIN */
+const count = 400;
+const defaults = {
+  origin: { y: 0.7 }
+};
+
+function fire(particleRatio, opts) {
+  confetti(Object.assign({}, defaults, opts, {
+    particleCount: Math.floor(count * particleRatio)
+  }));
+}
+
+function fireWins () {
+  fire(0.25, {
+    spread: 26,
+    startVelocity: 55,
+    colors: ['#073B4C', '#118AB2', '#06D6A0', '#FFD166', '#EF476F'],
+  });
+  fire(0.2, {
+    spread: 60,
+    colors: ['#073B4C', '#118AB2', '#06D6A0', '#FFD166', '#EF476F'],
+  });
+  fire(0.35, {
+    spread: 100,
+    decay: 0.91,
+    scalar: 0.8,
+    colors: ['#073B4C', '#118AB2', '#06D6A0', '#FFD166', '#EF476F'],
+  });
+  fire(0.1, {
+    spread: 120,
+    startVelocity: 25,
+    decay: 0.92,
+    scalar: 1.2,
+    colors: ['#073B4C', '#118AB2', '#06D6A0', '#FFD166', '#EF476F'],
+  });
+  fire(0.1, {
+    spread: 120,
+    startVelocity: 45,
+    colors: ['#073B4C', '#118AB2', '#06D6A0', '#FFD166', '#EF476F'],
+  });
 };
