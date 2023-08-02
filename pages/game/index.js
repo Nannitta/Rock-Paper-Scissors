@@ -64,6 +64,7 @@ function handlePlayAgain () {
   homePage.style.display = 'initial';
   round.style.display = 'none';
   final.style.display = 'none';
+  localStorageMatch();
   resetCounters();
 };
 
@@ -114,9 +115,9 @@ function currentRoundResult (iaMove, userMove) {
 function game () {
   if (iaWin === 3 || userWin === 3) {
     if (iaWin > userWin) {
-      finalResult.textContent = 'PERDISTE!';
+      finalResult.textContent = 'HAS PERDIDO!';
     } else {
-      finalResult.textContent = 'GANASTE!';
+      finalResult.textContent = 'HAS GANADO!';
     };
 
     final.style.display = 'initial';
@@ -132,4 +133,13 @@ function resetCounters () {
   userWin = 0;
   playerScore.textContent = `${userWin}`;
   iaScore.textContent = `${iaWin}`;
+};
+
+function localStorageMatch () {
+  const match = {
+    resultado: `${finalResult.textContent}`,
+    puntuacion: `${userWin} - ${iaWin}`,
+    date: new Date()
+  }
+  localStorage.setItem('partida', JSON.stringify(match));
 };
