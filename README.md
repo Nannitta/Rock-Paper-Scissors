@@ -1,16 +1,20 @@
-# Rock Papper Scissors
+![Logo](./assets/logopeq.png)
 
-![Badge Estado](https://img.shields.io/badge/ESTADO-Construccion-orange)
+![Badge Estado](https://img.shields.io/badge/ESTADO-Completado-green)
 
 Basado en el clásico juego de manos "Piedra, Papel o Tijeras". 🌑 📃 ✂️
 
 Con una interfaz de usuario sencilla, en la que podrás hacer click sobre el icono y seleccionar así tu opción.
 
-La piedra aplasta las tijeras, las tijeras cortan el papel y el papel envuelve la piedra
+![Mockup Proyecto](./assets/mockup.png)
+
+La piedra aplasta las tijeras, las tijeras cortan el papel y el papel envuelve la piedra.
+
+¿Conseguirás ganar a tu oponente? ¡Descúbrelo!
 
 🚨🚧🚧 EN CONSTRUCCIÓN 🚧🚧🚨
 
-¿Conseguirás ganar a tu oponente? Descúbrelo!
+- [ ] Tabla de puntuaciones
 
 ## Tecnologías utilizadas
 
