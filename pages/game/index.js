@@ -1,5 +1,5 @@
 const rock = document.querySelector('.rock');
-const papper = document.querySelector('.papper');
+const paper = document.querySelector('.paper');
 const scissors = document.querySelector('.scissors');
 const roundCounter = document.querySelector('h2');
 const roundResult = document.querySelector('.round-result');
@@ -27,7 +27,7 @@ round.style.display = 'none';
 
 /* EVENT LISTENER */
 rock.addEventListener('click', handleRound);
-papper.addEventListener('click', handleRound);
+paper.addEventListener('click', handleRound);
 scissors.addEventListener('click', handleRound);
 nextRound.addEventListener('click', handleNextRound);
 playAgain.addEventListener('click', handlePlayAgain);
@@ -73,7 +73,7 @@ function handlePlayAgain () {
 
 /* FUNCTIONS */
 function iaMoveGenerator () {
-  const moves = ['rock', 'papper', 'scissors'];
+  const moves = ['rock', 'paper', 'scissors'];
 
   let iaNum = Math.floor((Math.random() * (2 - 0 + 1)));
   for(let i = 0; i <= moves.length; i++) {
@@ -96,11 +96,11 @@ function currentRoundResult (iaMove, userMove) {
     roundResult.textContent = 'GANA LA IA';
     iaWin++;
     iaScore.textContent = `${iaWin}`;
-  } else if (iaMove === 'papper' && userMove === 'rock') {
+  } else if (iaMove === 'paper' && userMove === 'rock') {
     roundResult.textContent = 'GANA LA IA';
     iaWin++;
     iaScore.textContent = `${iaWin}`;
-  } else if (iaMove === 'scissors' && userMove === 'papper') {
+  } else if (iaMove === 'scissors' && userMove === 'paper') {
     roundResult.textContent = 'GANA LA IA';
     iaWin++;
     iaScore.textContent = `${iaWin}`;
