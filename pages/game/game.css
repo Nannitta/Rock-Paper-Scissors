@@ -179,13 +179,26 @@ header {
   cursor: pointer;
 }
 
+.go-leaderboard {
+  margin-top: 3rem;
+  font-family: 'Roboto';
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--oscuro);
+  text-decoration: none;
+}
+
+.cup {
+  width: 20px;
+}
+
 @media (max-width: 1024px) and (min-width: 768px) {
   #logo {
     width: 500px;
   }
 
   .container-moves {
-    margin-top: 3rem;
+    margin-top: 0;
   }
 
   .container-moves img {
@@ -193,11 +206,11 @@ header {
   }
 
   .round {
-    margin-top: 3rem;
+    margin-top: 0;
   }
 
   .final-round {
-    margin-top: 12rem;
+    margin-top: 5rem;
   }
 }
 
