@@ -215,7 +215,7 @@ header {
     width: 175px;
   }
 
-  .rock:hover, .papper:hover, .scissors:hover {
+  .rock:hover, .paper:hover, .scissors:hover {
     cursor: pointer;
     transform: scale(1.2);
   }

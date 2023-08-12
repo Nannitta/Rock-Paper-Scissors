@@ -29,6 +29,7 @@ body {
   position: absolute;
   bottom: 31rem;
   left: 16rem;
+  z-index: 2;
 }
 
 img#logo {

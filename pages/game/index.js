@@ -141,12 +141,21 @@ function resetCounters () {
 };
 
 function localStorageMatch () {
+  let historyMatches = JSON.parse(localStorage.getItem('partida'));
   const match = {
     resultado: `${finalResult.textContent}`,
     puntuacion: `${userWin} - ${iaWin}`,
-    date: new Date()
+    date: new Date().toLocaleString().slice(0, 16).replace(',', '').replaceAll('/', '-')
   }
-  localStorage.setItem('partida', JSON.stringify(match));
+
+  if (!historyMatches) {
+    historyMatches = [];
+  }
+    
+  historyMatches.push(match);
+
+  localStorage.setItem('partida', JSON.stringify(historyMatches));
+  console.log(historyMatches);
 };
 
 /*  CONFETTI WIN */
