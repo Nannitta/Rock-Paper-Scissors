@@ -66,7 +66,6 @@ function handlePlayAgain () {
   homePage.style.display = 'flex';
   round.style.display = 'none';
   final.style.display = 'none';
-  localStorageMatch();
   resetCounters();
 };
 
@@ -118,8 +117,10 @@ function game () {
   if (iaWin === 3 || userWin === 3) {
     if (iaWin > userWin) {
       finalResult.textContent = 'HAS PERDIDO!';
+      localStorageMatch();
     } else {
       finalResult.textContent = 'HAS GANADO!';
+      localStorageMatch();
       fireWins();
     };
 

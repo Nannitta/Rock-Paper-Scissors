@@ -12,11 +12,7 @@ La piedra aplasta las tijeras, las tijeras cortan el papel y el papel envuelve l
 
 ¿Conseguirás ganar a tu oponente? ¡Descúbrelo! 
 
-[Sitio Web](https://nannitta.github.io/Rock-Paper-Scissors/) 🖥️
-
-🚨🚧🚧 EN CONSTRUCCIÓN 🚧🚧🚨
-
-- [ ] Tabla de puntuaciones
+[Sitio Web](https://rock-paper-scissors-nannitta.vercel.app/) 🖥️
 
 ## Tecnologías utilizadas
 
